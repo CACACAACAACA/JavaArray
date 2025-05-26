@@ -1,0 +1,28 @@
+/*Write a java program that takes 2 integer numbers as input and calculates how many prime numbers exist between them.*/
+
+import java.util.Scanner;
+    public class Task02{
+          public static void main(String[]args){
+                Scanner sc=new Scanner(System.in);
+                int n1= sc.nextInt();
+                int n2=sc.nextInt();
+                int count=0;
+                if(n1<n2){
+                      for(int i=n1;i<=n2;i++){
+                            int div=0;
+                            for(int j=2;j<=i/2;j++){
+                                  if(i%j==0){
+                                        div++;}}
+                            if(div==0){
+                                  count++;}}}
+                else{
+                      for(int i=n2;i<=n1;i++){
+                            int div=0;
+                            for(int j=2;j<=i/2;j++){
+                                  if(i%j==0){
+                                        div++;}}
+                            if(div==0){
+                                  count++;}}}
+                System.out.println("There are "+count+" prime numbers between "+ n1+" and "+n2);
+          }
+    }
