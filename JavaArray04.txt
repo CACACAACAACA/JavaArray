@@ -1,0 +1,27 @@
+/*Task 4
+Write a Java program that takes a string input in small letters from the user and prints the previous alphabet in sequence for each alphabet found in the input.
+
+Sample Input    Output          
+wxyz             vwxy
+thecow          sgdbnv
+abcd             zabc */
+
+import java.util.Scanner;
+    public class JavaArray04{
+          public static void main(String [] args){
+                Scanner sc= new Scanner(System.in);
+                String st1=sc.nextLine();
+                String emp="";
+                for(int i=0;i<st1.length();i++){
+                      char ch=st1.charAt(i);
+                      if(ch=='a'){
+                            ch='z';
+                            emp+=ch;}
+                      else{
+                            int val=(int) ch;
+                            ch=(char)(val-1);
+                            emp+=ch;}}
+                System.out.println(emp);
+          }
+    }
+
