@@ -1,0 +1,28 @@
+/*Write a Java program that takes 10 inputs from the user in a loop, and displays the sum, average, minimum and maximum of Only the positive odd numbers from those numbers. If no such numbers are found, then display the message “No odd positive numbers found”.*/
+
+import java.util.Scanner;
+    public class JavaArray{
+          public static void main(String[]args){
+                Scanner sc=new Scanner(System.in);
+                int sum=0;
+                int min=0;
+                int max=0;
+                int count=0;
+                for(int i=0;i<10;i++){
+                      int num= sc.nextInt();     
+                      if(num%2!=0&&num>0){
+                            sum+=num;
+                            count++;
+                            if(num>max){
+                                  max=num;}
+                            else{
+                                  min=num;}}}
+                if(count!=0){
+                    System.out.println("Sum = "+sum);
+                    System.out.println("Minimum = "+min);
+                    System.out.println("Maximum = "+max);
+                    System.out.println("Average = "+(double)sum/count);}
+                else{
+                      System.out.println("No odd positive numbers found");}
+          }
+    }
