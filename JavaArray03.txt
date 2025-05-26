@@ -1,0 +1,24 @@
+/*Write a Java program that takes TWO string inputs (containing exactly one word in each string) from the user. Concatenate those two strings with a single space in between them. Generate a number which is the sum of all the letters in that concatenated string where A = 65, Z = 90, a = 97, and z = 122. Your task is to print that concatenated string and the number generated from that string.*/
+
+
+import java.util.Scanner;
+    public class Task03{
+          public static void main(String [] args){
+                Scanner sc= new Scanner(System.in);
+                String st1=sc.nextLine();
+                String st2=sc.nextLine();
+                int sum=0;
+                System.out.println(st1+" "+st2);
+                for(int i=0;i<st1.length();i++){
+                      char ch1=st1.charAt(i);
+                      if((ch1>65&&ch1<90)||(ch1>97&&ch1<122)){
+                            int ch= (int)st1.charAt(i);
+                            sum+=ch;}}
+                for(int i=0;i<st2.length();i++){
+                      char ch1=st2.charAt(i);
+                      if((ch1>65&&ch1<90)||(ch1>97&&ch1<122)){
+                            int ch= (int)st2.charAt(i);
+                            sum+=ch;}}
+                System.out.println(sum);
+          }
+    }                      
