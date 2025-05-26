@@ -1,0 +1,21 @@
+/*Write a Java program that asks the user for the length of an array and then creates an integer array of that length by taking inputs from the user. Then, reverse the original array without creating any new array and print it. [In-place reverse]*/
+
+import java.util.Scanner;
+public class JavaArray05{
+      public static void main(String [] args){
+            Scanner sc= new Scanner(System.in);
+            int n=sc.nextInt();
+            int[]arr= new int[n];
+            int h=n-1;
+            for(int i=0;i<n;i++){
+                  arr[i]=sc.nextInt();}
+            for(int k=0;k<n/2;k++){
+                  int t;
+                  t=arr[k];
+                  arr[k]=arr[h];
+                  arr[h]=t;
+                  h--;}
+            for(int i=0;i<n;i++){
+                  System.out.println(arr[i]);}
+      }
+}
