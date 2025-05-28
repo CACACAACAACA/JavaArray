@@ -1,0 +1,39 @@
+/*Write a Java program that will take the number of rows and columns from the user and create a 2D array by taking integer numbers from the user. Print the 2D array.  Finally, create a 1D array by flattening the 2D array.
+
+Sample Input           Sample Output 
+row = 2                 2D Array:
+column = 3              1 2 3
+1                       4 5 6
+2
+3                       1D Array:
+4                       1 2 3 4 5 6
+5  
+6
+*/
+
+import java.util.Scanner;
+public class Task08{
+      public static void main(String [] args){
+            Scanner sc= new Scanner(System.in);
+            int row= sc.nextInt();
+            int col= sc.nextInt();
+            int k=0;
+            int [] [] arr = new int [row] [col];
+            int [] arr1 = new int [row*col];
+            for(int i=0;i<arr.length;i++){
+                  for(int j=0;j<col;j++){
+                        arr[i][j]=sc.nextInt();}}
+            System.out.println("2D Array: ");
+            for(int i=0;i<arr.length;i++){
+                  for(int j=0;j<col;j++){
+                        System.out.print(arr[i][j] + " ");}
+                  System.out.println(" ");}
+            for(int i=0;i<arr.length;i++){
+                  for(int j=0;j<col;j++){
+                        arr1[k++]=arr[i][j];}}
+            System.out.println("1D Array: ");
+            for(int j=0;j<arr1.length;j++){
+                        System.out.print(arr1[j] + " ");}
+    }
+}    
+
